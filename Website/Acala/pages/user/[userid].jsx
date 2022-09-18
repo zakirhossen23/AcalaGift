@@ -45,10 +45,10 @@ export default function User() {
       }
 
       let arr = [];
-      let allLSP9NFTs = await contract.GetNFTsByUserAddrs(PROFILE_ADDRESS).call();
-      for (let index = 0; index < allLSP9NFTs.length; index++) {
-        const object = JSON.parse(allLSP9NFTs[index]);
-        const TokenId = Number(await contract.gettokenIdByUri(allLSP9NFTs[index]).call()) //Getting NFT id from NFT URI
+      let allNFTs = await contract.GetNFTsByUserAddrs(PROFILE_ADDRESS).call();
+      for (let index = 0; index < allNFTs.length; index++) {
+        const object = JSON.parse(allNFTs[index]);
+        const TokenId = Number(await contract.gettokenIdByUri(allNFTs[index]).call()) //Getting NFT id from NFT URI
         const EventID = Number(await contract.geteventIdFromTokenURI(TokenId).call())
         const isGifted = await contract.GetGiftedFromToken(TokenId.toString()).call();
         arr.push({

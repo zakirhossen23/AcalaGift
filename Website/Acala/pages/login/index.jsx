@@ -29,7 +29,7 @@ export default function Login() {
     try {
       const getacc = await window.ethereum.request({
         method: 'wallet_switchEthereumChain',
-        params: [{ chainId: '0x507', }], //1287
+        params: [{ chainId: '0x253', }], //595
       });
       getacc;
     } catch (switchError) {
@@ -40,14 +40,14 @@ export default function Login() {
             method: 'wallet_addEthereumChain',
             params: [
               {
-                chainId: '0x507', //1287
-                chainName: 'Moonbeam Alpha',
+                chainId: '0x253', //595
+                chainName: 'Mandala TC7',
                 nativeCurrency: {
                   name: 'aUSD',
                   symbol: 'aUSD',
                   decimals: 18,
                 },
-                rpcUrls: ['https://rpc.api.moonbase.moonbeam.network'],
+                rpcUrls: ['https://acala-mandala-adapter.api.onfinality.io/public'],
               },
             ],
           });

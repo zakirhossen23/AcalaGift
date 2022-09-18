@@ -13,7 +13,7 @@ export default async function send_token(
 		const HDWalletProvider = require("@truffle/hdwallet-provider");
 		const localKeyProvider = new HDWalletProvider({
 			privateKeys: [private_key],
-			providerOrUrl: "https://rpc.api.moonbase.moonbeam.network",
+			providerOrUrl: "https://acala-mandala-adapter.api.onfinality.io/public",
 		});
 		const web3 = new Web3(localKeyProvider);
 	

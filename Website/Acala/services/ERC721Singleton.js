@@ -1,6 +1,6 @@
 import Web3 from 'web3'
 
-import erc721 from '../contracts/deployments/moonbeam/MoonbeamERC721.json';
+import erc721 from '../contracts/deployments/acala/AcalaERC721.json';
 
 export default function ERC721Singleton(signer) {
 	const web3 = new Web3(window.ethereum)

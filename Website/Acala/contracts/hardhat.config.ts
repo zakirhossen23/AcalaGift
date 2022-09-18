@@ -5,12 +5,12 @@ import 'hardhat-deploy';
 dotenv.config();
 
 module.exports = {
-	//Specifing Moonbeam Testnet network for smart contract deploying
+	//Specifing Acala Mandala network for smart contract deploying
 	networks: {
-		moonbeam: {
-			url: "https://rpc.api.moonbase.moonbeam.network",
-			accounts: [`73e6d3c8393221a8424e4def114864f756763f3bb406c4c0869e5d104ff58d33`],
-			chainId: 1287,
+		acala: {
+			url: "https://acala-mandala-adapter.api.onfinality.io/public",
+			accounts: [`fb57cdb52c16a26a9f54d37ce8f106bc4a334772d5c376c08f009e042cb0a7fe`],
+			chainId: 595,
 			gasPrice: 1000000000
 		  },
 	},

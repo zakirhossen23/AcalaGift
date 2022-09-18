@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "cd contracts && hardhat deploy --network moonbeam"
+    "deploy": "cd contracts && hardhat deploy --network acala"
   },
   "dependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.6",

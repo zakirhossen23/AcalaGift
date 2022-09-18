@@ -6,7 +6,7 @@ const sleep = (milliseconds) => {
 export default async function WaitUntilTransactions(
 	hashid
 	) {
-		const provider = new ethers.providers.JsonRpcProvider("https://rpc.api.moonbase.moonbeam.network")
+		const provider = new ethers.providers.JsonRpcProvider("https://acala-mandala-adapter.api.onfinality.io/public")
 		let transactionReceipt = null
 		while (transactionReceipt == null) {
 			transactionReceipt = await provider.waitForTransaction(hashid);

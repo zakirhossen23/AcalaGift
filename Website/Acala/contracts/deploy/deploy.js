@@ -8,7 +8,7 @@ const func = async (hre) => {
 	const name = 'aUSD';
 	const symbol = 'aUSD';
 
-	await deploy('MoonbeamERC721', {
+	await deploy('AcalaERC721', {
 		from: deployer,
 		args: [name, symbol],
 		log: true,

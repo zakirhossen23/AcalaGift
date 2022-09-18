@@ -10,7 +10,7 @@ export default function UseFormInput({ defaultValue, type, placeholder, id }) {
 			onChange={(e) => setValue(e.target.value)}
 			type={type}
 			id={id}
-			autocomplete="off"
+			autoComplete="off"
 		/>
 	);
 	return [value, input, setValue];

@@ -8,7 +8,7 @@ export default function UseFormTextArea({ defaultValue,  placeholder, id, rows }
 			placeholder={placeholder}
 			onChange={(e) => setValue(e.target.value)}
 			id={id} rows={rows}
-			autocomplete="off"></textarea>		
+			autoComplete="off"></textarea>		
 	</>
 
 	);

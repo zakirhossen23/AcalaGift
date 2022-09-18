@@ -68,18 +68,36 @@ export default function BidNFTModal({
       ).toLocaleString('fullwide', { useGrouping: false }) //Multipling given bid price with 1E18
       activateWorkingModal('A moment please')
 
-      const transaction = {
-        from: window.ethereum.selectedAddress,
-        to: toAddress,
-        value: AmountinFull,
-        gasPrice: 1000000000,
-        gas: 5_000_000,
-      }
 
-      await web3.eth.sendTransaction(transaction) //Sending metamask confirmation
+      const ABI = [
+        {
+          "constant": true,
+          "inputs": [
+            {
+              "name": "_to",
+              "type": "address"
+            },
+            {
+              "name": "_value",
+              "type": "uint256"
+            }
+          ],
+          "name": "transfer",
+          "outputs": [
+            {
+              "name": "success",
+              "type": "bool"
+            }
+          ],
+          "payable": false,
+          "stateMutability": "nonpayable",
+          "type": "function"
+        }
+      ];
+      const address = '0x0000000000000000000100000000000000000001'; //Chainlink contract link
+      const contract2 = new web3.eth.Contract(ABI, address);
+      await contract2.methods.transfer(toAddress, (AmountinFull)).send({ from: window.ethereum.selectedAddress, gasPrice: 10000000000, gasLimit: 400000 });
 
-
-      
       activateWorkingModal('Done! Adding into EVM...')
 
       const tokenUri = await contract.tokenURI(tokenId).call()

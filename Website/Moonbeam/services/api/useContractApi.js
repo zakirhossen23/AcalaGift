@@ -1,6 +1,6 @@
 import Web3 from 'web3'
 
-import erc721 from '../../contracts/deployments/celo_alfajores/CeloERC721.json';
+import erc721 from '../../contracts/deployments/moonbeam/MoonbeamERC721.json';
 
 export default function useContract(privateKey) {
 	let contract = null;

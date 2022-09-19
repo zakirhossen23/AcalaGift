@@ -8,11 +8,16 @@ declare let window: any;
 export default function Welcome() {
 	const router = useRouter();
 	function donateCLICK() {
-		if (typeof window.ethereum === 'undefined') {
-			window.open("https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn", "_blank");
-		} else {
-			router.push('/donation');
-		}
+		if (typeof window.ethereum === "undefined") {
+			window.open(
+			  "https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn",
+			  "_blank"
+			);
+		  } else  if (window.ethereum.selectedAddress == null || window.localStorage.getItem("ConnectedMetaMask") !== "true") {
+			router.push("/login?[/donation]");
+		  } else {
+			router.push("/donation");
+		  }
 	}
 
 	function CreateEventsCLICK() {

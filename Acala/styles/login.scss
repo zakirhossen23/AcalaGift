@@ -1,0 +1,116 @@
+.Login-Parent-Container {
+    height: 100%;
+    width: 100%;
+}
+
+.Login-container {
+    background: #ffffff;
+
+    @media only screen and (max-width: 650px) {
+        padding: 0.6rem 12px 0.8rem 12px;
+    }
+
+    padding: 2rem 30px;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 0 auto;
+}
+
+// inside container
+.Login.col {
+    display: flex;
+    justify-content: center;
+    box-shadow: #f63860 0 0 19px 2px;
+    border-radius: 0.7rem;
+    overflow: hidden;
+    background: white;
+}
+
+@media only screen and (max-width: 650px) {
+
+    .Login.eventManagerButton {
+        width: 50%;
+        min-width: 5rem;
+        font-size: 4vw;
+        min-height: 3rem;
+        border-radius: 0.3rem;
+    }
+
+    .Login.userButton {
+        width: 50%;
+        min-width: 5rem;
+        font-size: 4vw;
+        min-height: 3rem;
+        border-radius: 0.3rem;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    .Login.row {
+        width: 100%;
+    }
+
+    .Login.col {
+        width: 35%;
+        height: 39%;
+        min-width: 24rem;
+        min-height: calc(4.5vw /0.2);
+    }
+
+    .Login.eventManagerButton {
+        width: 50%;
+        font-size: 2vw;
+    }
+
+    .Login.userButton {
+        width: 50%;
+        font-size: 2vw;
+    }
+
+}
+
+
+
+.eventManagerButton {
+    background: #121f29;
+    width: 50%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    border-radius: calc(2vw /2);
+    color: white;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.eventManagerButton.active {
+    background: #ef7db0;
+}
+
+.userButton.active {
+    background: #1b242a;
+}
+
+.userButton {
+    background: #0a58ca;
+    width: 50%;
+    cursor: pointer;
+    display: flex;
+    color: black;
+    flex-wrap: nowrap;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: calc(2vw /2);
+}
